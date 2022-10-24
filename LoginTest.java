@@ -16,7 +16,6 @@ public static WebDriver driver;
 
     @BeforeClass
     public static void setup(){
-        //System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver"));
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Julia\\IdeaProjects\\Untitled5\\chromedriver.exe");
         driver=new ChromeDriver();
         loginPage=new LoginPage(driver);
@@ -32,11 +31,11 @@ public static WebDriver driver;
         loginPage.clickLoginBtn();
         loginPage.inputPasswd(ConfProperties.getProperty("password"));
         loginPage.clickLoginBtn();
-       /* String user = profilePage.getUserName();
-        Assert.assertEquals(ConfProperties.getProperty("name"), user);*/
+        String user = profilePage.getUserName();
+        Assert.assertEquals(ConfProperties.getProperty("name"), user);
 
     }
-    @AfterClass
+   @AfterClass
     public static void tearDown() {
         driver.quit(); }
 }

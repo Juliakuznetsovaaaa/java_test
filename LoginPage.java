@@ -23,13 +23,13 @@ public class LoginPage {
     public void inputLogin(String login) {
         loginField.sendKeys(login);
     }
-
     public void inputPasswd(String passwd) {
 
         passwdField.sendKeys(passwd);
     }
 
-    public void clickLoginBtn() {
+   public void clickLoginBtn() {
+
         loginBtn.click();
     }
 

@@ -15,13 +15,13 @@ public class ProfilePage {
     @FindBy(xpath = "//*[@id='hook_Block_TFCounter']")
     private WebElement userMenu;
 
-    /*@FindBy (xpath = "//*[@id=\"hook_Block_Navigation\"]/div/div/div[1]/a")
+    @FindBy (xpath = "//*[@id=\"hook_Block_Navigation\"]/div/div/div[1]/a/div")
     private WebElement userName;
 
     public String getUserName() {
         String name = userName.getText();
         return name;
-    }*/
+    }
 
     public void entryMenu() {
         userMenu.click();
