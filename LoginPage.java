@@ -7,14 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
     public WebDriver driver;
-    public LoginPage(WebDriver driver){
+
+    public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver=driver;
+        this.driver = driver;
     }
-    @FindBy (xpath="//*[contains(@id, 'field_email')]")
+
+    @FindBy(xpath = "//*[contains(@id, 'field_email')]")
     private WebElement loginField;
 
-    @FindBy(xpath = "//*[@id=\"anonymPageContent\"]/div/div[1]/div[2]/div/div[2]/div[2]/div[1]/form/div[4]/input")
+    @FindBy(xpath = "//*[contains(@value, 'Войти в Одноклассники')]")
     private WebElement loginBtn;
 
     @FindBy(xpath = "//*[contains(@id, 'field_password')]")
@@ -23,17 +25,16 @@ public class LoginPage {
     public void inputLogin(String login) {
         loginField.sendKeys(login);
     }
+
     public void inputPasswd(String passwd) {
 
         passwdField.sendKeys(passwd);
     }
 
-   public void clickLoginBtn() {
+    public void clickLoginBtn() {
 
         loginBtn.click();
     }
-
-
 
 
 }

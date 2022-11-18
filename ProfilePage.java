@@ -11,7 +11,6 @@ public class ProfilePage {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
-
     @FindBy(xpath = "//*[@id='hook_Block_TFCounter']")
     private WebElement userMenu;
 
@@ -23,7 +22,4 @@ public class ProfilePage {
         return name;
     }
 
-    public void entryMenu() {
-        userMenu.click();
-    }
 }
